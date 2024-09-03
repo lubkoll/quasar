@@ -23,7 +23,7 @@ jobs:
         with:
           artifacts: "smart-contracts/osmosis/artifacts/*.wasm, smart-contracts/osmosis/artifacts/checksums.txt"
           artifactErrorsFailBuild: "true"
-          tag: "test2"
+          tag: "test3"
           generateReleaseNotes: "true"
       - name: Archive artifacts
         uses: actions/upload-artifact@v4
