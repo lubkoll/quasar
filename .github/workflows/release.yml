@@ -3,7 +3,7 @@ name: Create Release
 on:
   push:
     tags:
-    - '*'
+      - 'v*'
 
 jobs:
   create-release:
@@ -23,7 +23,6 @@ jobs:
         with:
           artifacts: "smart-contracts/osmosis/artifacts/*.wasm, smart-contracts/osmosis/artifacts/checksums.txt"
           artifactErrorsFailBuild: "true"
-          tag: "v0.2"
           generateReleaseNotes: "true"
       - name: Archive artifacts
         uses: actions/upload-artifact@v4
