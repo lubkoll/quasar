@@ -9,11 +9,11 @@ jobs:
   create-release:
     runs-on: ubuntu-latest
     steps:
-        name: tests
+      - name: tests
         uses: actions/checkout@v3
         run: cargo install just
         working-directory: smart-contracts
-        run: cargo check
+      - run: cargo check
         working-directory: smart-contracts/osmosis
       - name: Compile contracts
         run: just workspace-optimize
